@@ -151,12 +151,6 @@ a {
           flex: 1 1 50%;
 }
 
-.w-50 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
-}
-
 h1 {
   font-size: 3rem;
 }
@@ -167,6 +161,54 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    margin: 0 2rem;
+  }
+  .flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  /* Header*/
+  .direction-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  label {
+    color: #fff;
+    display: inline-block;
+  }
+  .logo,
+  label {
+    position: relative;
+    z-index: 1;
+  }
+  .nav {
+    display: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(75, 75, 93, 0.85)), to(rgba(75, 75, 93, 0.85)));
+    background: linear-gradient(rgba(75, 75, 93, 0.85), rgba(75, 75, 93, 0.85));
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 120px;
+  }
+  .toggle:checked ~ .nav {
+    display: inline-block;
+  }
+  .nav-menu-item {
+    margin: 20px 0;
+  }
 }
 
 html {
@@ -199,6 +241,16 @@ header .nav-menu-item {
 
 header .nav-menu-item a {
   font-size: 1rem;
+}
+
+/* Hamburger Menu */
+label {
+  color: #fff;
+  display: none;
+}
+
+.toggle {
+  display: none;
 }
 
 /*

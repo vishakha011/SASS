@@ -1,0 +1,50 @@
+
+@media screen and (max-width: 768px) {
+    html {
+      font-size: 10px;
+    }
+  
+    .container {
+      margin: 0 2rem;
+    }
+  
+    .flex-col {
+      flex-flow: column wrap;
+    }
+  
+  
+    /* Header*/
+    .direction-col {
+      flex-direction: column;
+    }
+  
+    label {
+      color: #fff;
+      display: inline-block;
+    }
+   
+    .logo,
+    label {
+      position: relative;
+      z-index: 1;
+    }
+  
+    .nav {
+      display: none;
+      background-color: rgba(0, 0, 0);
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding-top: 120px;
+    }
+  
+    .toggle:checked ~ .nav {
+      display: inline-block;
+    }
+  
+    .nav-menu-item {
+      margin: 20px 0;
+    }
+}

@@ -16,21 +16,19 @@ Custom-Styles
 =============================================================
 */
 body {
-    font-family: $font;
-    color: #9a9a9a;
-    font-weight: 400;
-    line-height: 1.6;
+    background-color: mistyrose;
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.inner-container {
-    max-width: 1000px;
-    margin: 0 auto;
+//  padding: 0 2rem;
+    @media screen and (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+    }
 }
 
 .flex-between {
@@ -38,15 +36,15 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 .flex {
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+.wrap {
+    flex-wrap: wrap;
 }
 
 a {
-    color: #fff;
     display: inline-block;
     text-decoration: none;
 }
@@ -59,18 +57,22 @@ a {
     text-align: center;
 }
 
+.img-responsive {
+    max-width: 100%;
+    object-fit: cover;
+}
+
 .btn {
-    font-size: 0.7rem;
-    color: $primary-color;
-    letter-spacing: 2px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
     text-transform: uppercase;
-    padding: 0.8rem 2rem;
-    margin: 2rem 0;
-    border: 2px solid $primary-color;
-    border-radius: 30px;
+    color: #212931;
+    // color: $secondary-color;
+    padding: 1rem;
+    border: 2px solid #212931;
+    &:hover {
+        color: rgb(11, 243, 231);
+        border: 2px solid rgb(11, 243, 231);
+    }
 }
-
-.btn:hover {
-    background-color: rgba($primary-color, 0.1);
-}
-

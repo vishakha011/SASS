@@ -1,0 +1,416 @@
+@import "reset";
+@import "general";
+@import "_variable";
+@import "_base";
+
+/*
+=============================================================
+Intro-Styles
+=============================================================
+*/
+.intro {
+    color: #fff;
+    text-align: center;
+    padding: 8rem 4rem 6rem 4rem;
+    .intro-heading {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    p {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-bottom: 2rem;
+        padding: 0 8rem;
+        line-height: 2.3;
+    }
+
+    img {
+        max-width: 4rem;
+    }
+}
+
+/*
+=============================================================
+Header-Styles
+=============================================================
+*/
+.header {
+    background: rgba(255, 255, 255, 0.175);
+    line-height: 4rem;
+    padding: 0;
+
+}
+.nav-menu {
+    display: flex;
+    .nav-menu-item {
+        margin-right: 1.5rem;
+        a {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ece3e3;
+            &:hover {
+                color: rgb(11, 243, 231);;
+            }
+        }
+    }
+
+}
+.icons {
+    padding: 0 1rem;
+    .fab {
+        font-size: 1rem;
+        margin-right: 1.5rem;  
+        color: #ece3e3;
+        &:hover {
+            color: rgb(11, 243, 231);;
+        }
+    }
+}
+.active {
+    padding: 0 1rem;
+    background-color: #fff;
+    a{
+        color: $secondary-color !important;
+        // color: #212931 !important;
+    }
+    
+}
+
+/*
+=============================================================
+Hero-Styles
+=============================================================
+*/
+.hero-section {
+    background-color: #fff;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+
+    &::before,
+    &::after {
+        content: "";
+        flex: 1 1;
+        border-bottom: 2px solid #eee;
+        margin: auto;
+        max-width: 36%;
+        color: #eee;
+    }
+    &::before {
+        margin-right: 35px;
+    }
+    &::after {
+        margin-left: 35px;
+    }
+}
+
+.hero {
+    .hero-heading {
+        font-size: 3.5rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: $secondary-color;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+
+        &:hover {
+            color: rgb(11, 243, 231);
+        }
+    }
+    .hero-text {
+        font-size: 1rem;
+        font-style: italic;
+        margin-bottom: 2rem;
+        padding: 0 22rem;
+        line-height: 2.2;
+        font-family: 'Bitter', serif;
+    }
+}
+.hero-img {
+    margin: 4rem 0;
+}
+
+/*
+=============================================================
+Blog-Styles
+=============================================================
+*/
+.blog-section {
+    background-color: #fff;
+}
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog {
+    border-color: #eeeeee;
+    border-left-width: 2px;
+    border-style: solid;
+    border-top-width: 2px;
+    text-align: center;
+    padding: 3.5rem 2.5rem;
+    @media screen and (max-width: 768px) {
+        border-left-width: 0px;
+        // border-bottom-width: 2px;        
+    }
+    &:nth-child(2n-1){
+        border-left-width: 0;    
+    }
+    span {
+        display: inline-block;
+        font-size: 0.8rem;
+        color: $secondary-color;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-heading {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: $secondary-color;
+        line-height: 1.4;
+        text-transform: uppercase;
+        &:hover {
+            color: $active-color;
+        }
+    }
+    img {
+        margin: 2.4rem 0;
+    }
+
+    .blog-text {
+        font-size: 1rem;
+        text-align: justify;
+        margin: 0 0 2rem 0;
+        color: $secondary-color;
+        line-height: 2;
+    }
+}
+
+/*
+=============================================================
+Pagination-section
+=============================================================
+*/
+.pagination-section {
+    background-color: #fff;
+    border-top: 2px solid #eee;
+}
+
+.pagination {
+    display: inline-block;
+    a{
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: $secondary-color;
+        padding: 0.8rem 1.2rem;
+        transition: bacground-color .3s;
+        border: 2px solid #eee;
+        margin-left: -7px;
+        text-transform: uppercase;
+        &:hover {
+            color: rgb(11, 243, 231);
+            border: 2px solid rgb(11, 243, 231);
+        }
+    }
+    .active-page {
+        background-color: #eee;
+        color: $secondary-color;
+        border: 2px solid #eee;
+
+    }
+}
+
+/*
+=============================================================
+Contact-section
+=============================================================
+*/
+.contact-section {
+    display: flex;
+    background-color: #f5f5f5;
+    // padding: 4rem;
+}
+
+form {
+    padding: 4rem; 
+    .field {
+        margin-bottom: 2rem;
+       label {
+           display: block;
+           text-align: left;
+           color: #717981;
+           font-size: 0.8rem;
+           font-weight: 600;
+           margin-bottom: 0.8rem;
+       }
+       input {
+        height: 2.5rem;
+       }
+       input,
+       textarea {
+        border: solid 2px #e2e2e2;
+        color: #fff;
+        display: block;
+        outline: 0;
+        padding: 0 1rem;
+        text-decoration: none;
+        width: 100%;
+        background-color: #f5f5f5;
+       }
+
+       textarea {
+           padding: 0.5rem 1rem;
+       }
+
+       ::placeholder {
+           color: #717981;
+           font-weight: 500;
+       }
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        color: #717981;
+        background-color: #f5f5f5;
+        border: 2px solid #717981;
+    }
+
+}
+
+.border-left {
+    border-left: 2px solid #e2e2e2;
+    
+}
+.contact {
+    display: flex;
+    align-items: flex-start;
+    padding: 4rem;
+    border-bottom: 2px solid #e2e2e2;
+    
+
+    h4 {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #717981;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+        margin: 0 0 1rem 0;
+        padding-right: 3rem;
+    }
+    address,
+    .contact-text {
+        color: #909498;
+        font-size: 0.8rem;
+        &:hover {
+            color: rgb(11, 243, 231);
+        }
+    }
+
+
+    .social-media {
+        display: flex;
+        align-items: center;
+        
+        .icon {
+            font-size: 1rem;
+            margin-right: 1rem;
+            a {
+                color: #717981;
+
+                &:hover {
+                    color: rgb(11, 243, 231);
+                }
+            }
+           
+        }
+    }
+}
+
+/*
+=============================================================
+Footer-section
+=============================================================
+*/
+.footer {
+    small {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.25);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 900;
+        letter-spacing: 0.075em;
+        line-height: 1.5;
+        margin: 4rem auto 8rem auto;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/*
+=============================================================
+Media Queries
+=============================================================
+*/
+
+@media screen and (max-width: 768px) {
+    html {
+      font-size: 10px;
+    }
+    .intro {
+        padding: 2rem 1rem;
+    }
+
+    .flex-col {
+        flex-direction: column;
+    }
+  
+    // Header
+    .nav-menu {
+        margin-bottom: 1rem;
+    }
+    .active {
+        padding: 0 1rem;
+        background: none;
+        
+        a{
+            color: #ece3e3 !important;
+        }
+    }
+    .fab {
+        margin-bottom: 2rem;
+    }
+
+    // Hero
+    .hero-section{
+        padding: 4rem 0;
+        // .hero-img {
+        //     display: none;
+        // }
+        // .hero-heading{
+        //     font-size: 2.5rem;
+        // }
+        .hero-text {
+            padding: 0 1rem;
+        }
+    }
+    .posts {
+        flex-direction: column;
+    }
+    .contact {
+        padding: 1rem 4rem;
+        border-bottom: none;
+        h4 {
+            padding-right: 2rem;
+        }
+    }
+}
